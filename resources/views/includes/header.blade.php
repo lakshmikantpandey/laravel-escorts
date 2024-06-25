@@ -24,7 +24,7 @@
           <li><a class="nav-link scrollto" href="/about">About</a></li>
           <li><a class="nav-link scrollto" href="/models">Models</a></li>
           <li><a class="nav-link scrollto" href="/gallery">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="/pricing">Pricing</a></li>
+          <li><a class="nav-link scrollto" href="/pricing">Rates</a></li>
           <!-- <li><a href="blog.html">Blog</a></li> -->
           <!-- <li class="dropdown megamenu"><a href="#"><span>Mega Menu</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
