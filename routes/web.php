@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\EnquiryController;
 use App\Http\Controllers\RatesController;
 use App\Http\Controllers\ModelsController;
@@ -36,8 +37,15 @@ Route::get('/pricing', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 });
+
 Route::get('/admin', function () {
     return view('admin/dashboard');
+});
+
+Route::get('login', [Controller::class, 'showLoginForm'])->name('login');
+Route::post('login', [Controller::class, 'login']);
+Route::get('dashboard', function () {
+    return view('admin.admin.dashboard');
 });
 
 Route::post('/categories',[CategoryController::class, 'createCategory'])->name('categories');

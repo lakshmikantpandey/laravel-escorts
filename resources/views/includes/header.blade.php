@@ -72,7 +72,7 @@
         <i class="bi bi-list mobile-nav-toggle d-none"></i>
       </nav><!-- .navbar -->
 
-      <a class="btn-getstarted scrollto" href="/models">Book</a>
+      <a class="btn-getstarted scrollto" href="/contact#info">Book</a>
 
     </div>
   </header><!-- End Header -->
