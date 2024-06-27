@@ -48,7 +48,7 @@ Route::get('dashboard', function () {
     return view('admin.admin.dashboard');
 });
 
-Route::post('/categories',[CategoryController::class, 'createCategory'])->name('categories');
+Route::post('/categories',[CategoryController::class, 'createCategory'])->name('createCategory');
 Route::get('/delete-categories/{id}',[CategoryController::class,'deleteCategory']);
 Route::get('/categories',[CategoryController::class,'showCategories']);
 

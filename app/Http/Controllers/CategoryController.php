@@ -16,17 +16,18 @@ class CategoryController extends BaseController
 
     public function createCategory(Request $request)
     {
+        dd($request);
         $request->validate([
-            'name'=>'required',
+            'categoryName'=>'required',
         ]);
 
         $category = new Category;
-        $category->name = $request->name;
+        $category->categoryName = $request->categoryName;
         $save = $category->save();
 
         if($save){
-            Session::flash('message', 'Category Has Been Sent Successfully!');
-            return back();
+            // Session::flash('message', 'Category Has Been Sent Successfully!');
+            return back()->with('Category_added','Category has been created successfully');
         }
         else
         {
