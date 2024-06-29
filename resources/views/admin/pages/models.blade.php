@@ -8,7 +8,7 @@
         <div class="container-fluid p-0">
             <div class="row">
                 <div class="col-12">
-                    <button class="btn btn-primary" type="button">Add Model</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addModel">Add Model</button>
                     <div class="card">
                         <div class="card-title">Models</div>
                         <div class="card-body">
@@ -80,6 +80,39 @@
                 </div>
             </div>
 
+        </div>
+
+        <div class="modal fade" id="addModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add Model</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="modelForm" action="{{ route('createModel') }}" method="POST">
+                        @csrf
+                        <div class="modal-body">
+                            <input type="hidden" name="modelId" id="modelId" value="">
+                            <label for="categoryName">Model Name</label>
+                            <input type="text" class="form-control" name="modelName" id="modelName" placeholder="Enter Model Name" />
+                            <label for="categoryName">Age</label>
+                            <input type="text" class="form-control" name="age" id="age" placeholder="Enter Model Age" />
+                            <label for="categoryName">City</label>
+                            <input type="text" class="form-control" name="city" id="city" placeholder="Enter Model city" />
+                            <label for="categoryName">Height</label>
+                            <input type="text" class="form-control" name="height" id="height" placeholder="Enter Model height" />
+                            <label for="categoryName">Category</label>
+                            <input type="text" class="form-control" name="category" id="category" />
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="submit" id="saveCategoryBtn" class="btn btn-primary">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
 
     </div>

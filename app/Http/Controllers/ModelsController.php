@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Models;
 use Illuminate\Http\Request;
 
@@ -9,8 +10,9 @@ class ModelsController extends Controller
 {
     public function showModels(Models $enquiry)
     {
+        $categories = Category::orderBy('id','DESC')->get();
         $models = Models::orderBy('id','DESC')->get();
-        return view('admin.pages.models',compact('models'));
+        return view('admin.pages.models',compact('models', 'categories'));
     }
    
     public function create()

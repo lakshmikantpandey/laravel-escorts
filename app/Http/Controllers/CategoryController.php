@@ -14,35 +14,49 @@ class CategoryController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public function showCategories(Category $category)
+    {
+        $categories = Category::orderBy('id', 'DESC')->get();
+        return view('admin.pages.categories', compact('categories'));
+    }
     public function createCategory(Request $request)
     {
-        dd($request);
         $request->validate([
-            'categoryName'=>'required',
+            'categoryName' => 'required',
         ]);
 
         $category = new Category;
         $category->categoryName = $request->categoryName;
         $save = $category->save();
 
-        if($save){
+        if ($save) {
             // Session::flash('message', 'Category Has Been Sent Successfully!');
-            return back()->with('Category_added','Category has been created successfully');
-        }
-        else
-        {
-            return back()->with('fail','somthing went wrong,try again later');
+            return back()->with('Category_added', 'Category has been created successfully');
+        } else {
+            return back()->with('fail', 'somthing went wrong,try again later');
         }
     }
-    public function showCategories(Category $category)
+
+    public function updateCategory(Request $request, $id)
     {
-        $categories = Category::orderBy('id','DESC')->get();
-        return view('admin.pages.categories',compact('categories'));
+        $request->validate([
+            'categoryName' => 'required',
+        ]);
+
+        $category = Category::findOrFail($id);
+        $category->categoryName = $request->categoryName;
+        $save = $category->save();
+
+        if ($save) {
+            return back()->with('Category_updated', 'Category has been updated successfully');
+        } else {
+            return back()->with('fail', 'Something went wrong, try again later');
+        }
     }
+
     public function deleteCategory($id)
     {
-        Category::where('id',$id)->delete();
-        return back()->with('Category_deleted','Category has been deleted successfully');
+        Category::where('id', $id)->delete();
+        return back()->with('Category_deleted', 'Category has been deleted successfully');
     }
-    
 }

@@ -49,14 +49,16 @@ Route::get('dashboard', function () {
 });
 
 Route::post('/categories',[CategoryController::class, 'createCategory'])->name('createCategory');
-Route::get('/delete-categories/{id}',[CategoryController::class,'deleteCategory']);
+Route::post('/update-category/{id}', [CategoryController::class, 'updateCategory'])->name('updateCategory');
+Route::get('/delete-category/{id}',[CategoryController::class,'deleteCategory']);
 Route::get('/categories',[CategoryController::class,'showCategories']);
 
-Route::post('/banners',[BannersController::class, 'createBanner'])->name('banners');
-Route::get('/delete-banners/{id}',[BannersController::class,'deleteBanners']);
+Route::post('/banners',[BannersController::class, 'createBanner'])->name('createBanner');
+Route::post('/update-banner/{id}', [BannersController::class, 'updateBanner'])->name('updateBanner');
+Route::get('/delete-banner/{id}',[BannersController::class,'deleteBanner']);
 Route::get('/banners',[BannersController::class,'showBanners']);
 
-Route::post('/models',[ModelsController::class, 'createModel'])->name('models');
+Route::post('/models',[ModelsController::class, 'createModel'])->name('createModel');
 Route::get('/delete-models/{id}',[ModelsController::class,'deleteModels']);
 Route::get('/models',[ModelsController::class,'showModels']);
 

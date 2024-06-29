@@ -9,15 +9,16 @@ use Session;
 class EnquiryController extends Controller
 {
     public function createEnquiry(Request $request)
-    {
+    {  
         $request->validate([
             'name'=>'required',
             'age'=>'required',
             'model_preference'=>'required',
             'city'=>'required',
-            'mobile'=>'required|email',
+            'mobile'=>'required',
             'message'=>'required'
         ]);
+
 
         $enquiry = new Enquiry;
         $enquiry->name = $request->name;
@@ -29,8 +30,7 @@ class EnquiryController extends Controller
         $save = $enquiry->save();
 
         if($save){
-            Session::flash('message', 'Enquiry Has Been Sent Successfully!');
-            return back();
+            return back()->with('success','Enquiry sent successfully! We will cantact you soon.');
         }
         else
         {

@@ -84,7 +84,8 @@
       </div>
 
       <div class="col-lg-8">
-        <form action="{{ route('enquiry') }}" method="POST" role="form" class="php-email-form">
+        <form id="contactForm" action="{{ route('enquiry') }}" method="POST">
+          @csrf
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -94,6 +95,9 @@
             </div>
             <div class="col-md-6 form-group">
               <input type="text" name="model_preference" class="form-control" id="model_preference" placeholder="Preference Model">
+            </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="city" class="form-control" id="city" placeholder="City">
             </div>
             <div class="col-md-6 form-group">
               <input type="text" name="mobile" class="form-control" id="mobile" placeholder="Your Mobile" required>

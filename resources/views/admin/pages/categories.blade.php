@@ -25,11 +25,10 @@
                                     @foreach ($categories as $category)
                                     <tr>
                                         <td>{{ $loop->iteration}}</td>
-                                        <td>{{$category->name}}</td>
+                                        <td>{{$category->categoryName}}</td>
                                         <td>{{$category->created_at}}</td>
                                         <td class="text-nowrap">
-                                            <a href="mailto:{{$category->email}}" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="bottom" title="Reply"><i class="fas fa-reply"></i></a>
-                                            <a href="tel:{{$category->phone}}" class="btn btn-sm btn-info"><i class="fas fa-phone-volume" data-toggle="tooltip" data-placement="bottom" title="Call"></i></a>
+                                        <a href="#" class="btn btn-sm btn-primary editCategory" data-id="{{ $category->id }}" data-name="{{ $category->categoryName }}" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
                                             <a href="/delete-category/{{$category->id}}" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
@@ -52,20 +51,41 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form action="{{ route('createCategory') }}" method="POST" role="form">
+                    <form id="categoryForm" action="{{ route('createCategory') }}" method="POST" role="form">
+                        @csrf
                         <div class="modal-body">
+                            <input type="hidden" name="categoryId" id="categoryId" value="">
                             <label for="categoryName">Category Name</label>
-                            <input type="text" class="form-control" name="categoryName" placeholder="Enter Category Name" />
+                            <input type="text" class="form-control" name="categoryName" id="categoryName" placeholder="Enter Category Name" />
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary">Create</button>
+                            <button type="submit" id="saveCategoryBtn" class="btn btn-primary">Create</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+
     </div>
 </main>
+
+
+<script>
+    $(document).ready(function() {
+        $('.editCategory').click(function() {
+            var category_id = $(this).data('id');
+            var category_name = $(this).data('name');
+            
+            $('#categoryId').val(category_id);
+            $('#categoryName').val(category_name);
+            $('#exampleModalLabel').text('Edit Category');
+            $('#saveCategoryBtn').text('Update');
+            $('#categoryForm').attr('action', '/update-category/' + category_id);
+            $('#addCategoryModal').modal('show');
+        });
+    });
+</script>
+
 
 @stop

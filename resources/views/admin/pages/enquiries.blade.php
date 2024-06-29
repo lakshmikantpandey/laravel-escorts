@@ -37,9 +37,8 @@
                                             <td>{{$enquiry->budget}}</td>
                                             <td>{{$enquiry->city}}</td>
                                             <td class="text-nowrap">
-                                               <a href="mailto:{{$enquiry->email}}" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="bottom" title="Reply"><i class="fas fa-reply"></i></a>
                                                <a href="tel:{{$enquiry->phone}}" class="btn btn-sm btn-info"><i class="fas fa-phone-volume" data-toggle="tooltip" data-placement="bottom" title="Call"></i></a>
-                                               <a href="/delete-message/{{$enquiry->id}}"  class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
+                                               <a href="/delete-enquiry/{{$enquiry->id}}"  class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
                                             </td>
                                         </tr>
                                     @endforeach
