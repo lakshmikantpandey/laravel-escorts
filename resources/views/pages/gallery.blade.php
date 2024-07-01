@@ -9,8 +9,9 @@
       <div class="container">
 
         <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Non hic nulla eum consequatur maxime ut vero memo vero totam officiis pariatur eos dolorum sed fug dolorem est possimus esse quae repudiandae. Dolorem id enim officiis sunt deserunt esse soluta consequatur quaerat</p>
+          <h2>See our most recommended models Gallery</h2>
+          <p>Explore our gallery to find the embodiment of passion and sophistication, each companion eager to fulfill your desires.
+            Each profile in our gallery is a testament to allure and charm, promising an exceptional experience tailored to your preferences.</p>
         </div>
 
       </div>
@@ -21,10 +22,10 @@
 
           <ul class="portfolio-flters">
             <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
+            <li data-filter=".filter-app">Russian</li>
+            <li data-filter=".filter-product">College</li>
+            <li data-filter=".filter-branding">Housewife</li>
+            <li data-filter=".filter-books">Models</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row g-0 portfolio-container">
@@ -150,7 +151,7 @@
 
         <div class="section-header">
           <h2>Our Top Models</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+          <p>Browse through our gallery and elevate your experience with companions who redefine luxury and intimacy.</p>
         </div>
 
         <div class="row gy-5">

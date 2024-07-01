@@ -56,7 +56,7 @@
           <div class="card">
             <img class="card-img-top" src="assets/img/testimonials/testimonials-2.jpg" alt="Card image cap">
             <div class="card-body text-center">
-              <h5 class="card-title">College Escorts</h5>
+              <h5 class="card-title">Russian Escorts</h5>
               <p class="card-text">1 hour - Rs 9599 - Rs 8000</p>
               <p class="card-text">2 hour - Rs 10599 - Rs 8999</p>
               <p class="card-text">6 hour - Rs 17000 - Rs 13000</p>
@@ -70,7 +70,7 @@
           <div class="card">
             <img class="card-img-top" src="assets/img/testimonials/testimonials-2.jpg" alt="Card image cap">
             <div class="card-body text-center">
-              <h5 class="card-title">College Escorts</h5>
+              <h5 class="card-title">Housewife Escorts</h5>
               <p class="card-text">1 hour - Rs 9599 - Rs 8000</p>
               <p class="card-text">2 hour - Rs 10599 - Rs 8999</p>
               <p class="card-text">6 hour - Rs 17000 - Rs 13000</p>
