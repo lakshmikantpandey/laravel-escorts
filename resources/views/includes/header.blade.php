@@ -5,21 +5,11 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>Lakshmikant<span>.</span></h1>
+        <h1 class="py-3">EscortsHub</h1>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-
-          <!-- <li class="dropdown"><a href="#"><span>Home</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-            <ul>
-              <li><a href="index.html" class="active">Home 1 - index.html</a></li>
-              <li><a href="index-2.html">Home 2 - index-2.html</a></li>
-              <li><a href="index-3.html">Home 3 - index-3.html</a></li>
-              <li><a href="index-4.html">Home 4 - index-4.html</a></li>
-            </ul>
-          </li> -->
-
           <li><a class="nav-link scrollto" href="/">Home</a></li>
           <!-- <li><a class="nav-link scrollto" href="/about">About</a></li> -->
           <li><a class="nav-link scrollto" href="/models">Call Girls in Goa</a></li>

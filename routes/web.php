@@ -38,35 +38,40 @@ Route::get('/contact', function () {
     return view('pages.contact');
 });
 
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
-
 Route::get('login', [Controller::class, 'showLoginForm'])->name('login');
 Route::post('login', [Controller::class, 'login']);
-Route::get('dashboard', function () {
-    return view('admin.admin.dashboard');
+Route::get('/logout', [Controller::class, 'logout'])->name('logout');
+
+Route::middleware(['auth'])->prefix('admin')->group(function () {
+    Route::get('/', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    // Categories
+    Route::post('/categories', [CategoryController::class, 'createCategory'])->name('createCategory');
+    Route::post('/update-category/{id}', [CategoryController::class, 'updateCategory'])->name('updateCategory');
+    Route::get('/delete-category/{id}', [CategoryController::class, 'deleteCategory']);
+    Route::get('/categories', [CategoryController::class, 'showCategories']);
+
+    // Banners
+    Route::post('/banners', [BannersController::class, 'createBanner'])->name('createBanner');
+    Route::post('/update-banner/{id}', [BannersController::class, 'updateBanner'])->name('updateBanner');
+    Route::get('/delete-banner/{id}', [BannersController::class, 'deleteBanner']);
+    Route::get('/banners', [BannersController::class, 'showBanners']);
+
+    // Models
+    Route::post('/models', [ModelsController::class, 'createModel'])->name('createModel');
+    Route::get('/delete-models/{id}', [ModelsController::class, 'deleteModels']);
+    Route::get('/models', [ModelsController::class, 'showModels']);
+
+    // Rates
+    Route::post('/rates', [RatesController::class, 'createRate'])->name('rates');
+    Route::get('/delete-rates/{id}', [RatesController::class, 'deleteRates']);
+    Route::get('/rates', [RatesController::class, 'showRates']);
+
+    // Enquiries
+    Route::post('/enquiry', [EnquiryController::class, 'createEnquiry'])->name('enquiry');
+    Route::get('/delete-enquiry/{id}', [EnquiryController::class, 'deleteEnquiry']);
+    Route::get('/enquiries', [EnquiryController::class, 'showEnquiry']);
+
 });
-
-Route::post('/categories',[CategoryController::class, 'createCategory'])->name('createCategory');
-Route::post('/update-category/{id}', [CategoryController::class, 'updateCategory'])->name('updateCategory');
-Route::get('/delete-category/{id}',[CategoryController::class,'deleteCategory']);
-Route::get('/categories',[CategoryController::class,'showCategories']);
-
-Route::post('/banners',[BannersController::class, 'createBanner'])->name('createBanner');
-Route::post('/update-banner/{id}', [BannersController::class, 'updateBanner'])->name('updateBanner');
-Route::get('/delete-banner/{id}',[BannersController::class,'deleteBanner']);
-Route::get('/banners',[BannersController::class,'showBanners']);
-
-Route::post('/models',[ModelsController::class, 'createModel'])->name('createModel');
-Route::get('/delete-models/{id}',[ModelsController::class,'deleteModels']);
-Route::get('/models',[ModelsController::class,'showModels']);
-
-Route::post('/rates',[RatesController::class, 'createRate'])->name('rates');
-Route::get('/delete-rates/{id}',[RatesController::class,'deleteRates']);
-Route::get('/rates',[RatesController::class,'showRates']);
-
-Route::post('/enquiry',[EnquiryController::class, 'createEnquiry'])->name('enquiry');
-Route::get('/delete-enquiry/{id}',[EnquiryController::class,'deleteEnquiry']);
-Route::get('/enquiries',[EnquiryController::class,'showEnquiry']);
-

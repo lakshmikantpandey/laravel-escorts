@@ -10,7 +10,7 @@
                 <h3><strong>Analytics</strong> Dashboard</h3>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-xl-12 col-xxl-5 d-flex">
                 <div class="w-100">
                     <div class="row">
@@ -101,7 +101,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </main>

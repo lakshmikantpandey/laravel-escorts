@@ -52,15 +52,15 @@
 </head>
 
 <body>
-    @include('includes.header')
-    <section id="hero-animated" class="hero-animated d-flex align-items-center">
-        <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-        <img src="assets/img/hero-carousel/banner1.jpg" class="img-fluid animated">
-        <h2>Book Your Favourite <span>Model</span></h2>
-        </div>
-    </section>
-    @yield('content')
-    @include('includes.footer')
+  @include('includes.header')
+  <section id="hero-animated" class="hero-animated d-flex align-items-center">
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
+      <img src="assets/img/hero-carousel/banner1.jpg" class="img-fluid animated">
+      <h2>Book Your Favourite <span>Model</span></h2>
+    </div>
+  </section>
+  @yield('content')
+  @include('includes.footer')
 
   <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -78,7 +78,7 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    $('#myModal').on('shown.bs.modal', function () {
+    $('#myModal').on('shown.bs.modal', function() {
       $('#myInput').trigger('focus')
     })
   </script>
