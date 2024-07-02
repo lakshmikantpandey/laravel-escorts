@@ -27,8 +27,8 @@
 
     <!-- BEGIN SETTINGS -->
     <!-- Remove this after purchasing -->
-    <link class="js-stylesheet" href="css/light.css" rel="stylesheet">
-    <script src="js/settings.js"></script>
+    <link class="admin/js-stylesheet" href="admin/css/light.css" rel="stylesheet">
+    <script src="admin/js/settings.js"></script>
     <style>
         body {
             opacity: 0;
@@ -90,7 +90,7 @@
         </div>
     </main>
 
-    <script src="js/app.js"></script>
+    <script src="admin/js/app.js"></script>
 </body>
 
 </html>

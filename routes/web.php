@@ -45,7 +45,7 @@ Route::get('/logout', [Controller::class, 'logout'])->name('logout');
 Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
-    })->name('admin.dashboard');
+    })->name('admin');
 
     // Categories
     Route::post('/categories', [CategoryController::class, 'createCategory'])->name('createCategory');

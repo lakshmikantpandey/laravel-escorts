@@ -20,6 +20,7 @@ class CreateModelsTable extends Migration
             $table->unsignedBigInteger('categoryId');
             $table->string('city');
             $table->string('height');
+            $table->string('image');
             $table->timestamps();
 
             $table->foreign('categoryId')->references('id')->on('categories');
