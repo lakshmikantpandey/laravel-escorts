@@ -41,21 +41,15 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: Lakshmikant
-  * Updated: Jan 29 2024 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/Lakshmikant-bootstrap-business-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
   @include('includes.header')
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-      <img src="assets/img/hero-carousel/banner1.jpg" class="img-fluid animated">
+    @foreach ($banners as $banner)
+    <img src="{{ asset('admin/img/banners/' . $banner->image) }}" class="img-fluid animated">
+    @endforeach
       <h2>Book Your Favourite <span>Model</span></h2>
     </div>
   </section>
@@ -76,9 +70,3 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <script>
-    $('#myModal').on('shown.bs.modal', function() {
-      $('#myInput').trigger('focus')
-    })
-  </script>

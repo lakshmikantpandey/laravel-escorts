@@ -10,31 +10,23 @@ class ModelsController extends Controller
 {
     public function showModels(Request $request)
     {
-        $categories = Category::orderBy('id','DESC')->get();
-        $models = Models::orderBy('id','DESC')->get();
-        return view('admin.pages.models',compact('models', 'categories'));
+        $categories = Category::orderBy('id', 'DESC')->get();
+        $models = Models::orderBy('id', 'DESC')->get();
+        return view('admin.pages.models', compact('models', 'categories'));
     }
-   
+
     public function createModel(Request $request)
-    {  
-        // dd($request);
+    {
         $request->validate([
-            'modelName'=>'required',
-            'age'=>'required',
-            'city'=>'required',
-            'height'=>'required',
-            'categoryId'=>'required',
-            'image' => 'required',
-            // 'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'modelName' => 'required',
+            'age' => 'required',
+            'city' => 'required',
+            'height' => 'required',
+            'categoryId' => 'required',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('img/models'), $imageName);
-        }
-
-        dd($request);
+        $imageName = $this->handleImageUpload($request);
 
         $modelData = new Models;
         $modelData->modelName = $request->modelName;
@@ -45,51 +37,73 @@ class ModelsController extends Controller
         $modelData->image = $imageName;
         $save = $modelData->save();
 
-        if($save){
-            return back()->with('success','Model added successfully.');
-        }
-        else
-        {
-            return back()->with('fail','somthing went wrong,try again later');
+        if ($save) {
+            return back()->with('success', 'Model added successfully.');
+        } else {
+            return back()->with('fail', 'somthing went wrong,try again later');
         }
     }
 
-    public function store(Request $request)
+    public function editModel(Request $request, $id)
     {
-        //
+        $model = Models::find($id);
+
+        if (!$model) {
+            return back()->with('fail', 'Model not found.');
+        }
+
+        $request->validate([
+            'modelName' => 'required',
+            'age' => 'required',
+            'city' => 'required',
+            'height' => 'required',
+            'categoryId' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $this->deleteImage($model->image);
+
+            $imageName = $this->handleImageUpload($request);
+            $model->image = $imageName;
+        }
+
+        $model->modelName = $request->modelName;
+        $model->age = $request->age;
+        $model->city = $request->city;
+        $model->height = $request->height;
+        $model->categoryId = $request->categoryId;
+
+        $save = $model->save();
+
+        if ($save) {
+            return back()->with('success', 'Model updated successfully.');
+        } else {
+            return back()->with('fail', 'Something went wrong, try again later.');
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Models  $models
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Models $models)
+
+    private function handleImageUpload(Request $request)
     {
-        //
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('admin/img/models'), $imageName);
+        return $imageName;
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Models  $models
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Models $models)
+    private function deleteImage($imageName)
     {
-        //
+        if ($imageName) {
+            $imagePath = public_path('admin/img/models') . '/' . $imageName;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
+        }
     }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Models  $models
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Models $models)
+    public function deleteModel($id)
     {
-        //
+        Models::where('id', $id)->delete();
+        return back()->with('success', 'Model has been deleted successfully');
     }
 }

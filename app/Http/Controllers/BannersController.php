@@ -27,7 +27,7 @@ class BannersController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('img/banners'), $imageName);
+            $image->move(public_path('admin/img/banners'), $imageName);
         }
 
         $banner = new Banners;
@@ -43,30 +43,47 @@ class BannersController extends Controller
 
     public function updateBanner(Request $request, $id)
     {
+        $banner = Banners::find($id);
+
+        if (!$banner) {
+            return back()->with('fail', 'banner not found.');
+        }
+
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
 
-        $banner = Banners::findOrFail($id);
-
         if ($request->hasFile('image')) {
-            if ($banner->image) {
-                Storage::delete('public/img/banners/' . $banner->image);
-            }
+            $this->deleteImage($banner->image);
 
-            $image = $request->file('image');
-            $imageName = time() . '.' . $image->getClientOriginalExtension();
-            $image->storeAs('public/img/banners/', $imageName);
-
+            $imageName = $this->handleImageUpload($request);
             $banner->image = $imageName;
         }
 
         $save = $banner->save();
 
         if ($save) {
-            return back()->with('success', 'Banner has been updated successfully');
+            return back()->with('success', 'Model updated successfully.');
         } else {
-            return back()->with('fail', 'Something went wrong, try again later');
+            return back()->with('fail', 'Something went wrong, try again later.');
+        }
+    }
+
+    private function handleImageUpload(Request $request)
+    {
+        $image = $request->file('image');
+        $imageName = time() . '.' . $image->getClientOriginalExtension();
+        $image->move(public_path('admin/img/banners'), $imageName);
+        return $imageName;
+    }
+
+    private function deleteImage($imageName)
+    {
+        if ($imageName) {
+            $imagePath = public_path('admin/img/banners') . '/' . $imageName;
+            if (file_exists($imagePath)) {
+                unlink($imagePath);
+            }
         }
     }
 

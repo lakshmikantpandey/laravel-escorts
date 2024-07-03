@@ -28,8 +28,8 @@ class RatesController extends Controller
         $save = $rates->save();
 
         if($save){
-            Session::flash('message', 'Enquiry Has Been Sent Successfully!');
-            return back();
+            // Session::flash('message', 'Enquiry Has Been Sent Successfully!');
+            return back()->with('success','Rate Has Been added Successfully!');
         }
         else
         {

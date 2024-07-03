@@ -22,31 +22,31 @@
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="/admin/categories">
-							<i class="align-middle" data-feather="user"></i> <span class="align-middle">Category</span>
+							<i class="align-middle" data-feather="database"></i> <span class="align-middle">Category</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="/admin/models">
-							<i class="align-middle" data-feather="credit-card"></i> <span class="align-middle">Models</span>
+							<i class="align-middle" data-feather="users"></i> <span class="align-middle">Models</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="/admin/rates">
-							<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Rates</span>
+							<i class="align-middle" data-feather="dollar-sign"></i> <span class="align-middle">Rates</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="/admin/enquiries">
-							<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Enquiries</span>
+							<i class="align-middle" data-feather="help-circle"></i> <span class="align-middle">Enquiries</span>
 						</a>
 					</li>
 
 					<li class="sidebar-item">
 						<a class="sidebar-link" href="/logout">
-							<i class="align-middle" data-feather="calendar"></i> <span class="align-middle">Logout</span>
+							<i class="align-middle" data-feather="log-out"></i> <span class="align-middle">Logout</span>
 						</a>
 					</li>
 

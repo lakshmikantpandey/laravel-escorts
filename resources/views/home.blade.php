@@ -476,14 +476,14 @@
 
         <div class="info" id="info">
           <h3>Contact us for booking</h3>
-          <p>Et id eius voluptates atque nihil voluptatem enim in tempore minima sit ad mollitia commodi minus.</p>
+          <p>Send us a mail or pick up the phone – we are always available. We're available 24 hours a day.</p>
 
 
           <div class="info-item d-flex">
             <i class="bi bi-envelope flex-shrink-0"></i>
             <div>
               <h4>Email:</h4>
-              <p>contact@escortshub.com</p>
+              <p><a href="mailto:contact@escortshub.com">contact@escortshub.com</a></p>
             </div>
           </div>
 
@@ -491,7 +491,7 @@
             <i class="bi bi-phone flex-shrink-0"></i>
             <div>
               <h4>Call:</h4>
-              <p>IN: +91 9876543210</p>
+              <p><a href="tel:+91 9876543210">IN: +91 9876543210</a></p>
             </div>
           </div>
 

@@ -30,7 +30,6 @@ class CategoryController extends BaseController
         $save = $category->save();
 
         if ($save) {
-            // Session::flash('message', 'Category Has Been Sent Successfully!');
             return back()->with('Category_added', 'Category has been created successfully');
         } else {
             return back()->with('fail', 'somthing went wrong,try again later');

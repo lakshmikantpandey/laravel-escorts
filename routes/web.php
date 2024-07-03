@@ -19,31 +19,28 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/models', function () {
-    return view('pages.models');
-});
-Route::get('/gallery', function () {
-    return view('pages.gallery');
-});
-Route::get('/about', function () {
-    return view('pages.about');
-});
-Route::get('/pricing', function () {
-    return view('pages.pricing');
-});
-Route::get('/contact', function () {
-    return view('pages.contact');
-});
+//Pages
+Route::get('/', [Controller::class, 'home'])->name('home');
+
+Route::get('/models', [Controller::class, 'models'])->name('models');
+
+Route::get('/gallery', [Controller::class, 'gallery'])->name('gallery');
+
+Route::get('/about', [Controller::class, 'about'])->name('about');
+
+Route::get('/pricing', [Controller::class, 'pricing'])->name('pricing');
+
+Route::get('/contact', [Controller::class, 'contact'])->name('contact');
 
 Route::get('login', [Controller::class, 'showLoginForm'])->name('login');
 Route::post('login', [Controller::class, 'login']);
+
 Route::get('/logout', [Controller::class, 'logout'])->name('logout');
 
+Route::post('/enquiry', [EnquiryController::class, 'createEnquiry'])->name('enquiry');
+
 Route::middleware(['auth'])->prefix('admin')->group(function () {
-    Route::get('/', function () {
+    Route::get('/admin', function () {
         return view('admin.dashboard');
     })->name('admin');
 
@@ -60,9 +57,10 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/banners', [BannersController::class, 'showBanners']);
 
     // Models
-    Route::post('/models', [ModelsController::class, 'createModel'])->name('createModel');
-    Route::get('/delete-models/{id}', [ModelsController::class, 'deleteModels']);
     Route::get('/models', [ModelsController::class, 'showModels']);
+    Route::post('/models', [ModelsController::class, 'createModel'])->name('createModel');
+    Route::post('/edit-model/{id}', [ModelsController::class, 'editModel'])->name('editModel');
+    Route::get('/delete-model/{id}', [ModelsController::class, 'deleteModel']);
 
     // Rates
     Route::post('/rates', [RatesController::class, 'createRate'])->name('rates');
@@ -70,7 +68,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/rates', [RatesController::class, 'showRates']);
 
     // Enquiries
-    Route::post('/enquiry', [EnquiryController::class, 'createEnquiry'])->name('enquiry');
     Route::get('/delete-enquiry/{id}', [EnquiryController::class, 'deleteEnquiry']);
     Route::get('/enquiries', [EnquiryController::class, 'showEnquiry']);
 

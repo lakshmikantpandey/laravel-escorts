@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-12">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addBannerModal">Add Banner</button>
-                    <div class="card">
+                    <div class="card mt-2">
                         <div class="card-title">Banners</div>
                         <div class="card-body">
                             <table id="datatables-reponsive" class="table table-striped" style="width:100%">
@@ -23,11 +23,11 @@
                                     @foreach ($banners as $banner)
                                     <tr>
                                         <td class="banner-image">
-                                            <img height="100" width="100" src="{{ asset('img/banners/' . $banner->image) }}" alt="Banner Image">
+                                            <img height="100" width="100" src="{{ asset('admin/img/banners/' . $banner->image) }}" alt="Banner Image">
                                         </td>
                                         <td class="text-nowrap">
                                         <a href="#" class="btn btn-sm btn-primary editBanner" data-id="{{ $banner->id }}" data-name="{{ $banner->image }}" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
-                                            <a href="/delete-banner/{{$banner->id}}" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
+                                            <a href="delete-banner/{{$banner->id}}" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
                                         </td>
                                     </tr>
                                     @endforeach
@@ -76,7 +76,7 @@
             var banner_image = $(this).data('name');
             
             $('#bannerModalTitle').text('Edit Banner');
-            $('#bannerForm').attr('action', '/update-banner/' + banner_id);
+            $('#bannerForm').attr('action', 'update-banner/' + banner_id);
             $('#banner_id').val(banner_id);
             $('#addBannerModal').modal('show');
         });

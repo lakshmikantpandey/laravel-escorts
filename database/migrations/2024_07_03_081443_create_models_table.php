@@ -23,7 +23,10 @@ class CreateModelsTable extends Migration
             $table->string('image');
             $table->timestamps();
 
-            $table->foreign('categoryId')->references('id')->on('categories');
+            $table->foreign('categoryId')
+                ->references('id')
+                ->on('categories')
+                ->onDelete('cascade');
         });
     }
 

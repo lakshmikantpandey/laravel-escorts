@@ -5,20 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Enquiry;
 use Illuminate\Http\Request;
 use Session;
+use App\Mail\EnquiryMail;
+use Illuminate\Support\Facades\Mail;
 
 class EnquiryController extends Controller
 {
     public function createEnquiry(Request $request)
-    {  
+    {
         $request->validate([
-            'name'=>'required',
-            'age'=>'required',
-            'model_preference'=>'required',
-            'city'=>'required',
-            'mobile'=>'required',
-            'message'=>'required'
+            'name' => 'required',
+            'age' => 'required',
+            'model_preference' => 'required',
+            'city' => 'required',
+            'mobile' => 'required',
+            'message' => 'required'
         ]);
-
 
         $enquiry = new Enquiry;
         $enquiry->name = $request->name;
@@ -29,22 +30,21 @@ class EnquiryController extends Controller
         $enquiry->message = $request->message;
         $save = $enquiry->save();
 
-        if($save){
-            return back()->with('success','Enquiry sent successfully! We will cantact you soon.');
-        }
-        else
-        {
-            return back()->with('fail','somthing went wrong,try again later');
+        if ($save) {
+            Mail::to('lakshmikantpandey02@gmail.com')->send(new EnquiryMail($enquiry));
+            return back()->with('success', 'Enquiry sent successfully! We will cantact you soon.');
+        } else {
+            return back()->with('fail', 'somthing went wrong,try again later');
         }
     }
     public function showEnquiry(Enquiry $enquiry)
     {
-        $enquiries = Enquiry::orderBy('id','DESC')->get();
-        return view('admin.pages.enquiries',compact('enquiries'));
+        $enquiries = Enquiry::orderBy('id', 'DESC')->get();
+        return view('admin.pages.enquiries', compact('enquiries'));
     }
     public function deleteEnquiry($id)
     {
-        Enquiry::where('id',$id)->delete();
-        return back()->with('Message_deleted','Enquiry has been deleted successfully');
+        Enquiry::where('id', $id)->delete();
+        return back()->with('Message_deleted', 'Enquiry has been deleted successfully');
     }
 }
