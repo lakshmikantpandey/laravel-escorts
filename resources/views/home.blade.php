@@ -14,6 +14,10 @@
         Each profile in our gallery is a testament to allure and charm, promising an exceptional experience tailored to your preferences.</p>
     </div>
 
+    <div>
+      
+    </div>
+
   </div>
 
   <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
@@ -152,7 +156,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>Our Top Models</h2>
+      <h2 class="bg-warning">Our Top Models</h2>
       <p>Browse through our gallery and elevate your experience with companions who redefine luxury and intimacy.</p>
     </div>
 
@@ -223,7 +227,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>Our Services</h2>
+      <h2 class="bg-warning">Our Services</h2>
       <p>Ea vitae aspernatur deserunt voluptatem impedit deserunt magnam occaecati dssumenda quas ut ad dolores adipisci aliquam.</p>
     </div>
 
