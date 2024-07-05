@@ -176,7 +176,7 @@ section {
   right: 15px;
   bottom: 15px;
   z-index: 995;
-  background: var(--color-primary);
+  background: hotpink;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -185,13 +185,13 @@ section {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--color-white);
+  color: black;
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background: rgba(var(--color-primary-rgb), 0.85);
-  color: var(--color-white);
+  background: hotpink;
+  color: black;
 }
 
 .scroll-top.active {
@@ -244,7 +244,7 @@ section {
 .header .btn-getstarted:focus {
   font-size: 16px;
   color: var(--color-white);
-  background: var(--color-primary);
+  background: black;
   padding: 8px 23px;
   border-radius: 4px;
   transition: 0.3s;
@@ -254,7 +254,7 @@ section {
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
   color: var(--color-white);
-  background: rgba(var(--color-primary-rgb), 0.85);
+  background: black;
 }
 
 @media (max-width: 1279px) {
@@ -3176,4 +3176,12 @@ section {
 .footer .footer-legal .social-links a:hover {
   background: var(--color-primary);
   text-decoration: none;
+}
+
+.top-modal-title {
+  color: blue !important;
+}
+.model-card {
+  background: rgb(36,0,24);
+  background: linear-gradient(90deg, rgba(36,0,24,1) 0%, rgba(193,38,38,1) 48%, rgba(166,0,255,1) 100%);
 }

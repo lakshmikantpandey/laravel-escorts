@@ -8,148 +8,54 @@
 
   <div class="container">
 
+    <div>
+      <video height="500" width="500" autoplay controls loop muted poster="https://www.pinkgoa.in/wp-content/uploads/2024/01/pinkgoa-call-girl-thumbnail.webp" src="https://www.pinkgoa.in/wp-content/uploads/2024/01/pinkgoa-call-girls.mp4"></video>
+    </div>
+
+    <div>
+      <h2>Save more money by booking high class profile girls in our escorts service</h2>
+      <p>Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
+        Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates.</p>
+    </div>
+
+    <div>
+      <h2>100% Geniune model girls for campanions and enjoyment the special nights</h2>
+      <p>Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
+        Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates.</p>
+    </div>
+
     <div class="section-header">
-      <h2>See our most recommended models Gallery</h2>
+      <h2>See our most recommended models</h2>
       <p>Explore our gallery to find the embodiment of passion and sophistication, each companion eager to fulfill your desires.
         Each profile in our gallery is a testament to allure and charm, promising an exceptional experience tailored to your preferences.</p>
     </div>
 
-    <div>
-      
+    @foreach ($models as $model)
+    <div class="card border-3 border-dark mt-2">
+      <img src="{{ asset('admin/img/models/' . $model->image) }}" class="card-img-top" alt="...">
+      <div class="card-body model-card text-white">
+        <table class="table-bordered border-white w-100">
+          <tr>
+            <td class="ps-2">Name</td>
+            <td class="ps-2">{{ $model->modelName }}</td>
+          </tr>
+          <tr>
+            <td class="ps-2">Age</td>
+            <td class="ps-2">{{ $model->age }} Years</td>
+          </tr>
+        </table>
+        <div class="card-body text-center mt-3">
+          <p class="card-text">{{ $model->detail }}</p>
+          <a class="btn btn-dark rounded-4 mb-3" href="/contact">View more</a>
+          <p>{{ $model->city }}</p>
+        </div>
+      </div>
     </div>
+    @endforeach
 
   </div>
 
-  <div class="container-fluid" data-aos="fade-up" data-aos-delay="200">
-
-    <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
-
-      <ul class="portfolio-flters">
-        <li data-filter="*" class="filter-active">All</li>
-        <li data-filter=".filter-app">Russian</li>
-        <li data-filter=".filter-product">College</li>
-        <li data-filter=".filter-branding">Housewife</li>
-        <li data-filter=".filter-books">Models</li>
-      </ul><!-- End Portfolio Filters -->
-
-      <div class="row g-0 portfolio-container">
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-          <img src="assets/img/models/1.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Anita</h4>
-            <a href="/contact"><button class="btn btn-sm btn-info">Book now</button></a>
-            
-            <!-- <a href="contact" title="App 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
-            <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-          <img src="assets/img/models/2.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Riya</h4>
-            <!-- <a href="assets/img/portfolio/product-1.jpg" title="Product 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-          <img src="assets/img/models/3.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Pooja</h4>
-            <!-- <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-          <img src="assets/img/models/4.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Swati</h4>
-            <!-- <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-          <img src="assets/img/models/5.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Rakhi</h4>
-            <!-- <a href="assets/img/portfolio/app-2.jpg" title="App 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-          <img src="assets/img/models/6.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Rashmi</h4>
-            <!-- <a href="assets/img/portfolio/product-2.jpg" title="Product 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-          <img src="assets/img/models/7.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Ranjana</h4>
-            <!-- <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-          <img src="assets/img/models/8.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Suruchi</h4>
-            <!-- <a href="assets/img/portfolio/books-2.jpg" title="Branding 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
-            <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-app">
-          <img src="assets/img/models/10.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Vandana</h4>
-            <!-- <a href="assets/img/portfolio/app-3.jpg" title="App 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-product">
-          <img src="assets/img/models/11.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Amitha</h4>
-            <!-- <a href="assets/img/portfolio/product-3.jpg" title="Product 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-branding">
-          <img src="assets/img/models/1.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Isha</h4>
-            <!-- <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-        <div class="col-xl-3 col-lg-4 col-md-6 portfolio-item filter-books">
-          <img src="assets/img/models/2.jpeg" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>Nishtha</h4>
-            <!-- <a href="assets/img/portfolio/books-3.jpg" title="Branding 3" data-gallery="portfolio-gallery" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-            <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
-          </div>
-        </div><!-- End Portfolio Item -->
-
-      </div><!-- End Portfolio Container -->
-
-    </div>
-
-  </div>
-</section><!-- End Gallery Section -->
+</section>
 
 <!-- ======= top model Section ======= -->
 <section id="team" class="team">
@@ -162,65 +68,26 @@
 
     <div class="row gy-5">
 
+      @foreach ($topModels as $topModel)
+
       <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
         <div class="team-member">
           <div class="member-img">
-            <img src="assets/img/models/5.jpeg" class="img-fluid" alt="">
+            <img src="{{ asset('admin/img/models/' . $topModel->image) }}" class="img-fluid" alt="">
           </div>
           <div class="member-info">
-            <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-            <h4>Rachna</h4>
+            <h4>{{ $topModel->modelName }}</h4>
             <span>Top Booked Model</span>
           </div>
         </div>
-      </div><!-- End Team Member -->
+      </div>
 
-      <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
-        <div class="team-member">
-          <div class="member-img">
-            <img src="assets/img/models/6.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="member-info">
-            <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-            <h4>Sarah Jhonson</h4>
-            <span>Top Booked Model</span>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
-
-      <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="600">
-        <div class="team-member">
-          <div class="member-img">
-            <img src="assets/img/models/7.jpeg" class="img-fluid" alt="">
-          </div>
-          <div class="member-info">
-            <!-- <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div> -->
-            <h4>Rachel Preet</h4>
-            <span>Top Booked Model</span>
-          </div>
-        </div>
-      </div><!-- End Team Member -->
+      @endforeach
 
     </div>
 
   </div>
 </section><!-- End top model Section -->
-
 
 <!-- ======= Services Section ======= -->
 <section id="services" class="services">
@@ -288,7 +155,6 @@
 
   </div>
 </section><!-- End Services Section -->
-
 
 <!-- ======= Pricing Section ======= -->
 <section id="pricing" class="pricing">
@@ -372,7 +238,6 @@
   </div>
 </section>
 
-
 <!-- ======= F.A.Q Section ======= -->
 <section id="faq" class="faq">
   <div class="container-fluid" data-aos="fade-up">
@@ -382,10 +247,7 @@
       <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
         <div class="content px-xl-5">
-          <h3>Frequently Asked <strong>Questions</strong></h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-          </p>
+          <h3>Have You Any <strong>Questions</strong></h3>
         </div>
 
         <div class="accordion accordion-flush px-xl-5" id="faqlist">
@@ -394,12 +256,12 @@
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-1">
                 <i class="bi bi-question-circle question-icon"></i>
-                Non consectetur a erat nam at lectus urna duis?
+                How do I book a model?
               </button>
             </h3>
             <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
               <div class="accordion-body">
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                To book a model in our services, you can contact us or fill the contact form we will reach you.
               </div>
             </div>
           </div><!-- # Faq item-->
@@ -408,12 +270,12 @@
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-2">
                 <i class="bi bi-question-circle question-icon"></i>
-                Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+                How much does it cost to hire an escort?
               </button>
             </h3>
             <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
               <div class="accordion-body">
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                Rates vary widely depending on factors like location, duration of the booking, and the services offered. It's common for rates to be higher in major cities.
               </div>
             </div>
           </div><!-- # Faq item-->
@@ -422,12 +284,12 @@
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-3">
                 <i class="bi bi-question-circle question-icon"></i>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+                What services do escorts provide?
               </button>
             </h3>
             <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
               <div class="accordion-body">
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                Escorts offer companionship, which can include conversation, accompanying clients to events, and sometimes intimate services. Specific services should be discussed and agreed upon beforehand.
               </div>
             </div>
           </div><!-- # Faq item-->
@@ -436,27 +298,13 @@
             <h3 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-4">
                 <i class="bi bi-question-circle question-icon"></i>
-                Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+                Can escorts travel with clients?
               </button>
             </h3>
             <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
               <div class="accordion-body">
                 <i class="bi bi-question-circle question-icon"></i>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </div>
-            </div>
-          </div><!-- # Faq item-->
-
-          <div class="accordion-item" data-aos="fade-up" data-aos-delay="600">
-            <h3 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-content-5">
-                <i class="bi bi-question-circle question-icon"></i>
-                Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
-              </button>
-            </h3>
-            <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-              <div class="accordion-body">
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
+                Some escorts offer travel companionship for extended trips. Discuss travel arrangements, costs, and expectations thoroughly before booking.
               </div>
             </div>
           </div><!-- # Faq item-->
@@ -478,10 +326,9 @@
 
       <div class="col-lg-12 sm-12 md-12">
 
-        <div class="info" id="info">
-          <h3>Contact us for booking</h3>
-          <p>Send us a mail or pick up the phone – we are always available. We're available 24 hours a day.</p>
-
+        <div class="info bg-warning" id="info">
+          <h3>Call now for 24/7 Escorts Booking</h3>
+          <p class="text-dark">Send us a mail or pick up the phone – we are always available. We're available 24 hours a day.</p>
 
           <div class="info-item d-flex">
             <i class="bi bi-envelope flex-shrink-0"></i>
@@ -499,6 +346,20 @@
             </div>
           </div>
 
+          <div class="info-item">
+            <a href="https://api.whatsapp.com/send?phone=9131013768">
+              <div class="d-flex">
+                <div>
+                  <i class="bi bi-whatsapp flex-shrink-0"></i>
+                </div>
+                <div>
+                  <h4>Whatsapp:</h4>
+                  <p>Send Message</p>
+                </div>
+              </div>
+            </a>
+          </div>
+
         </div>
 
       </div>
@@ -507,5 +368,20 @@
   </div>
 </section>
 
+<!-- 
+<div class="card p-3">
+  <div class="card-body">
+    <h5 class="card-title">Categories</h5>
+    <hr>
+    <ul>
+      <li>Category A</li>
+      <li>Category B</li>
+      <li>Category C</li>
+      <li>Category D</li>
+      <li>Category E</li>
+      <li>Category F</li>
+    </ul>
+  </div>
+</div> -->
 
 @stop

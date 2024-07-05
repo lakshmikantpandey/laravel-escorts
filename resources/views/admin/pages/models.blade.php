@@ -22,6 +22,7 @@
                                         <th>Height</th>
                                         <th>Category</th>
                                         <th>Image</th>
+                                        <!-- <th>Model Detail</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,6 +37,7 @@
                                         <td class="banner-image">
                                             <img height="100" width="100" src="{{ asset('admin/img/models/' . $model->image) }}" alt="Model Image">
                                         </td>
+                                        <!-- <td>{{$model->detail}}</td> -->
                                         <td class="text-nowrap">
                                             <a href="#" class="btn btn-sm btn-primary editModel" data-id="{{ $model->id }}" data-name="{{ $model->modelName }}" data-age="{{ $model->age }}" data-height="{{ $model->height }}" data-city="{{ $model->city }}" data-category="{{ $model->categoryId }}" data-image="{{ $model->image }}" data-toggle="tooltip" data-placement="bottom" title="Edit"><i class="fas fa-edit"></i></a>
                                             <a href="/admin/delete-model/{{$model->id}}" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="bottom" title="Delete"><i class="far fa-trash-alt"></i></a>
@@ -79,6 +81,8 @@
                                 <option value="{{ $category->id }}">{{ $category->categoryName }}</option>
                                 @endforeach
                             </select>
+                            <label for="height">Model Detail</label>
+                            <input type="text" class="form-control" name="detail" id="detail" placeholder="Enter Model Detail" required>
                             <label for="image">Model image</label>
                             <input type="file" class="form-control" name="image" id="image">
                         </div>
@@ -105,6 +109,7 @@
             var city = $(this).data('city');
             var categoryId = $(this).data('category');
             var image = $(this).data('image');
+            var detail = $(this).data('detail');
 
             $('#modelId').val(id);
             $('#modelName').val(name);
@@ -112,6 +117,7 @@
             $('#height').val(height);
             $('#city').val(city);
             $('#categoryId').val(categoryId);
+            $('#detail').val(detail);
 
             $('#modelForm').attr('action', '/admin/edit-model/' + id);
             $('#modelForm').attr('method', 'POST');

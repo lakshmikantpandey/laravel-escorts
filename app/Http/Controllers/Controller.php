@@ -17,7 +17,9 @@ class Controller extends BaseController
 
     public function home()
     {
-        return view('home');
+        $models = Models::orderBy('id', 'DESC')->take(5)->get();
+        $topModels = Models::orderBy('id', 'DESC')->take(3)->get();
+        return view('home', compact('models','topModels'));
     }
 
     public function about()

@@ -21,6 +21,7 @@ class ModelsController extends Controller
             'modelName' => 'required',
             'age' => 'required',
             'city' => 'required',
+            'detail' => 'required',
             'height' => 'required',
             'categoryId' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -32,6 +33,7 @@ class ModelsController extends Controller
         $modelData->modelName = $request->modelName;
         $modelData->age = $request->age;
         $modelData->city = $request->city;
+        $modelData->detail = $request->detail;
         $modelData->height = $request->height;
         $modelData->categoryId = $request->categoryId;
         $modelData->image = $imageName;
@@ -56,6 +58,7 @@ class ModelsController extends Controller
             'modelName' => 'required',
             'age' => 'required',
             'city' => 'required',
+            'detail' => 'required',
             'height' => 'required',
             'categoryId' => 'required',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -71,6 +74,7 @@ class ModelsController extends Controller
         $model->modelName = $request->modelName;
         $model->age = $request->age;
         $model->city = $request->city;
+        $model->detail = $request->detail;
         $model->height = $request->height;
         $model->categoryId = $request->categoryId;
 

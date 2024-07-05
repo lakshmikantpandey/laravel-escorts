@@ -21,7 +21,7 @@ class BannersController extends Controller
     public function createBanner(Request $request)
     {
         $request->validate([
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,avif|max:2048',
         ]);
 
         if ($request->hasFile('image')) {
@@ -50,7 +50,7 @@ class BannersController extends Controller
         }
 
         $request->validate([
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,avif|max:2048',
         ]);
 
         if ($request->hasFile('image')) {
