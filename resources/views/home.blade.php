@@ -30,28 +30,30 @@
         Each profile in our gallery is a testament to allure and charm, promising an exceptional experience tailored to your preferences.</p>
     </div>
 
-    @foreach ($models as $model)
-    <div class="card border-3 border-dark mt-2">
-      <img src="{{ asset('admin/img/models/' . $model->image) }}" class="card-img-top" alt="...">
-      <div class="card-body model-card text-white">
-        <table class="table-bordered border-white w-100">
-          <tr>
-            <td class="ps-2">Name</td>
-            <td class="ps-2">{{ $model->modelName }}</td>
-          </tr>
-          <tr>
-            <td class="ps-2">Age</td>
-            <td class="ps-2">{{ $model->age }} Years</td>
-          </tr>
-        </table>
-        <div class="card-body text-center mt-3">
-          <p class="card-text">{{ $model->detail }}</p>
-          <a class="btn btn-dark rounded-4 mb-3" href="/contact">View more</a>
-          <p>{{ $model->city }}</p>
+    <div class="row">
+      @foreach ($models as $model)
+      <div class="col-sm-12 col-lg-4 card border-3 border-dark mt-2">
+        <img height="350" width="350" src="{{ asset('admin/img/models/' . $model->image) }}" class="card-img-top" alt="{{ $model->modelName }}">
+        <div class="card-body model-card text-white">
+          <table class="table-bordered border-white w-100">
+            <tr>
+              <td class="ps-2">Name</td>
+              <td class="ps-2">{{ $model->modelName }}</td>
+            </tr>
+            <tr>
+              <td class="ps-2">Age</td>
+              <td class="ps-2">{{ $model->age }} Years</td>
+            </tr>
+          </table>
+          <div class="card-body text-center mt-3">
+            <p class="card-text">{{ $model->detail }}</p>
+            <a class="btn btn-dark rounded-4 mb-3" href="/contact">View more</a>
+            <p>{{ $model->city }} - {{ $model->area }}</p>
+          </div>
         </div>
       </div>
+      @endforeach
     </div>
-    @endforeach
 
   </div>
 
@@ -62,7 +64,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2 class="bg-warning">Our Top Models</h2>
+      <h1 class="bg-warning">Our Top Models</h1>
       <p>Browse through our gallery and elevate your experience with companions who redefine luxury and intimacy.</p>
     </div>
 
@@ -73,10 +75,10 @@
       <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
         <div class="team-member">
           <div class="member-img">
-            <img src="{{ asset('admin/img/models/' . $topModel->image) }}" class="img-fluid" alt="">
+            <img height="350" width="350" src="{{ asset('admin/img/models/' . $topModel->image) }}" class="img-fluid" alt="{{ $topModel->modelName }}">
           </div>
           <div class="member-info">
-            <h4>{{ $topModel->modelName }}</h4>
+            <h4>{{ $topModel->modelName }} - {{ $topModel->city }}</h4>
             <span>Top Booked Model</span>
           </div>
         </div>
@@ -103,7 +105,7 @@
       <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
         <div class="service-item">
           <div class="img">
-            <img src="assets/img/models/6.jpeg" class="img-fluid" alt="">
+            <img height="350" width="350" src="assets/img/models/6.jpeg" class="img-fluid" alt="Service Image">
           </div>
           <div class="details position-relative">
             <div class="icon">
@@ -120,7 +122,7 @@
       <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
         <div class="service-item">
           <div class="img">
-            <img src="assets/img/models/5.jpeg" class="img-fluid" alt="">
+            <img height="350" width="350" src="assets/img/models/5.jpeg" class="img-fluid" alt="Service Image">
           </div>
           <div class="details position-relative">
             <div class="icon">
@@ -137,7 +139,7 @@
       <div class="col-xl-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
         <div class="service-item">
           <div class="img">
-            <img src="assets/img/models/1.jpeg" class="img-fluid" alt="">
+            <img height="350" width="350" src="assets/img/models/1.jpeg" class="img-fluid" alt="Service Image">
           </div>
           <div class="details position-relative">
             <div class="icon">
@@ -166,7 +168,7 @@
 
     <div class="col-xl-12 col-md-12 d-flex" data-aos="zoom-in" data-aos-delay="200">
       <div class="member-img">
-        <img src="assets/img/models/12.png" class="img-fluid" alt="">
+        <img height="350" width="350" src="assets/img/models/12.png" class="img-fluid" alt="Service Image">
       </div>
     </div>
 
@@ -179,7 +181,7 @@
       <div class="row">
         <div class="col-sm-3">
           <div class="card">
-            <img class="card-img-top" src="assets/img/models/13.png" alt="Card image cap">
+            <img height="350" width="350" class="card-img-top" src="assets/img/models/13.png" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title">College Escorts</h5>
               <p class="card-text">1 hour - ₹9599 - ₹8000</p>
@@ -193,7 +195,7 @@
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img class="card-img-top" src="assets/img/models/14.png" alt="Card image cap">
+            <img height="350" width="350" class="card-img-top" src="assets/img/models/14.png" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title">College Escorts</h5>
               <p class="card-text">1 hour - ₹9599 - ₹8000</p>
@@ -207,7 +209,7 @@
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img class="card-img-top" src="assets/img/models/15.png" alt="Card image cap">
+            <img height="350" width="350" class="card-img-top" src="assets/img/models/15.png" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title">Russian Escorts</h5>
               <p class="card-text">1 hour - ₹9599 - ₹8000</p>
@@ -221,7 +223,7 @@
         </div>
         <div class="col-sm-3">
           <div class="card">
-            <img class="card-img-top" src="assets/img/models/6.jpeg" alt="Card image cap">
+            <img height="350" width="350" class="card-img-top" src="assets/img/models/6.jpeg" alt="Card image cap">
             <div class="card-body text-center">
               <h5 class="card-title">Housewife Escorts</h5>
               <p class="card-text">1 hour - ₹9599 - ₹8000</p>
@@ -368,8 +370,8 @@
   </div>
 </section>
 
-<!-- 
-<div class="card p-3">
+
+<!-- <div class="card p-3">
   <div class="card-body">
     <h5 class="card-title">Categories</h5>
     <hr>

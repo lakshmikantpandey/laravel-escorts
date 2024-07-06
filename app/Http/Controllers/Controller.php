@@ -19,22 +19,31 @@ class Controller extends BaseController
     {
         $models = Models::orderBy('id', 'DESC')->take(5)->get();
         $topModels = Models::orderBy('id', 'DESC')->take(3)->get();
-        return view('home', compact('models','topModels'));
+        return view('home', compact('models', 'topModels'));
     }
 
     public function about()
     {
         return view('pages.about');
     }
-    
+
     public function pricing()
     {
         return view('pages.pricing');
     }
 
-    public function models()
+    public function models(Request $request)
     {
-        return view('pages.models');
+        $city = $request->query('city');
+        if ($request->query('city') == '') {
+            $city = 'Goa';
+        }
+
+        $goaModels = Models::orderBy('id', 'DESC')
+            ->where('city', $city)
+            ->get();
+
+        return view('pages.models', compact('goaModels'));
     }
 
     public function gallery(Request $request)
@@ -42,9 +51,9 @@ class Controller extends BaseController
         $categories = Category::orderBy('id', 'DESC')->get();
         $models = Models::orderBy('id', 'DESC')->get();
         $topModels = Models::orderBy('id', 'DESC')->take(3)->get();
-        return view('pages.gallery', compact('models','topModels', 'categories'));
+        return view('pages.gallery', compact('models', 'topModels', 'categories'));
     }
-    
+
     public function contact(Request $request)
     {
         $categories = Category::orderBy('id', 'DESC')->get();
@@ -72,5 +81,4 @@ class Controller extends BaseController
         Auth::logout();
         return redirect('/login');
     }
-
 }

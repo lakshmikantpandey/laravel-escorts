@@ -3,11 +3,17 @@
 
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Best Call girls in raipur chhattishgarh, hyderabad, and goa,</title>
-  <meta content="Raipur independent escorts, housewife, callgirls, service" name="description">
+  <title>Best Call girls in Raipur Chhattishgarh, Hyderabad, and Goa VIP Escort</title>
+  <meta content="Raipur Goa Hyderabad Independent High Class in (a low price) Female Escort Service Housewife Callgirla Service VIP Hotel room booking doorstep delivery with COD" name="description">
   <meta content="Raipur independent escorts, housewife, callgirls, service" name="keywords">
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Best Call girls in Raipur Chhattishgarh, Hyderabad, and Goa VIP Escort +Hotel room (COD)" />
+  <meta property="og:description" content="High Class in (a low price) Raipur Goa Hyderabad Independent Female Escort Service Housewife Callgirla Service VIP Hotel room booking doorstep delivery with COD" />
+  <meta property="og:url" content="https://www.raipur7starescorts.in" />
+  <meta property="og:site_name" content="Raipur 7 star Escorts" />
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -47,11 +53,11 @@
   @include('includes.header')
   <section id="hero-animated" class="hero-animated d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
-    @foreach ($banners as $banner)
-    <img src="{{ asset('admin/img/banners/' . $banner->image) }}" class="img-fluid animated">
-    @endforeach
-    <h2>Find Your Favourite <span>Model</span></h2>
-  </div>
+      @foreach ($banners as $banner)
+      <img src="{{ asset('admin/img/banners/' . $banner->image) }}" class="img-fluid animated">
+      @endforeach
+      <h2>Find Your Favourite <span>Model</span></h2>
+    </div>
   </section>
   @yield('content')
   @include('includes.footer')

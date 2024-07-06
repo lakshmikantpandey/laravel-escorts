@@ -19,6 +19,7 @@ class CreateModelsTable extends Migration
             $table->string('age');
             $table->unsignedBigInteger('categoryId');
             $table->string('city');
+            $table->string('area');
             $table->string('detail');
             $table->string('height');
             $table->string('image');

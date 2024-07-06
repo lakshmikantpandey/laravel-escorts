@@ -19,6 +19,7 @@
                                         <th>Model Name</th>
                                         <th>Age</th>
                                         <th>City</th>
+                                        <th>Area</th>
                                         <th>Height</th>
                                         <th>Category</th>
                                         <th>Image</th>
@@ -32,6 +33,7 @@
                                         <td>{{$model->modelName}}</td>
                                         <td>{{$model->age}}</td>
                                         <td>{{$model->city}}</td>
+                                        <td>{{$model->area}}</td>
                                         <td>{{$model->height}}</td>
                                         <td>{{$model->categoryId}}</td>
                                         <td class="banner-image">
@@ -74,6 +76,8 @@
                             <input type="text" class="form-control" name="height" id="height" placeholder="Enter Model Height" required>
                             <label for="city">City</label>
                             <input type="text" class="form-control" name="city" id="city" placeholder="Enter Model city">
+                            <label for="city">Area</label>
+                            <input type="text" class="form-control" name="aria" id="aria" placeholder="Enter Model aria">
                             <label for="categoryId">Category</label>
                             <select class="form-control" name="categoryId" id="categoryId" required>
                                 <option value="">Choose model category...</option>

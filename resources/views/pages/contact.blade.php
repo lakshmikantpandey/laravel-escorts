@@ -6,14 +6,14 @@
   <div class="container">
 
     <div class="section-header">
-      <h2>Contact Us</h2>
+      <h1>Contact Us</h1>
       <p>Are you want to enjoy your goa night with high class companions and want to make it more memorable journey.</p>
     </div>
 
 
     <div class="col-xl-12 col-md-12 d-flex" data-aos="zoom-in" data-aos-delay="200">
       <div class="member-img">
-        <img src="assets/img/models/1.jpeg" class="img-fluid" alt="">
+        <img src="assets/img/models/1.jpeg" class="img-fluid" alt="Contact image">
       </div>
     </div>
 

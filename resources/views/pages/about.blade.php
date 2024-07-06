@@ -7,7 +7,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>About Us</h2>
+      <h1>About Us</h1>
       <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
     </div>
 
@@ -15,7 +15,7 @@
 
       <div class="col-lg-5">
         <div class="about-img">
-          <img src="assets/img/about.jpg" class="img-fluid" alt="">
+          <img src="assets/img/about.jpg" class="img-fluid" alt="About image">
         </div>
       </div>
 

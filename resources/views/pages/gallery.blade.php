@@ -47,7 +47,7 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>Our Top Models</h2>
+      <h1>Our Top Models</h1>
       <p>Browse through our gallery and elevate your experience with companions who redefine luxury and intimacy.</p>
     </div>
 
@@ -56,7 +56,7 @@
       <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
         <div class="team-member">
           <div class="member-img">
-            <img src="{{ asset('admin/img/models/' . $topModel->image) }}" class="img-fluid" alt="">
+            <img src="{{ asset('admin/img/models/' . $topModel->image) }}" class="img-fluid" alt="{{ $topModel->modelName }}">
           </div>
           <div class="member-info">
             <h4>{{ $topModel->modelName }} - {{ $topModel->city }}</h4>
