@@ -54,7 +54,7 @@
                         <input type="hidden" name="banner_id" id="banner_id">
                         <div class="modal-body">
                             <label for="image">Banner Image</label>
-                            <input type="file" class="form-control" name="image" id="image" />
+                            <input type="file" class="form-control" name="image" id="image" required/>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>

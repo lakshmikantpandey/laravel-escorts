@@ -45,7 +45,7 @@
 
             <div class="col-lg-12 sm-12 md-12">
 
-                <div class="info bg-warning" id="info">
+                <div class="info" id="info">
                     <h3>Call now for 24/7 Escorts Booking</h3>
                     <p class="text-dark">Send us a mail or pick up the phone – we are always available. We're available 24 hours a day.</p>
 
