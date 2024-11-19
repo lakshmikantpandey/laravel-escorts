@@ -17,28 +17,15 @@
       </div>
     </div>
 
-    <div class="d-flex align-items-center mt-4">
-      <h4>Save more money by booking high class profile girls in our escorts service</h4>
-    </div>
-    <p>Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.</p>
 
 
-    <div class="d-flex align-items-center mt-4">
-      <h4>Save more money by booking high class profile girls in our escorts service</h4>
-    </div>
-    <p>Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
-      Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
-      Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
-    </p>
+    <h3>
+      Confidential and Secure Contact
+    </h3>
+     <p> Your privacy is our top priority. All communications with our escort service are handled with the utmost confidentiality. Our team ensures that all personal details are kept secure, and we strive to provide a seamless, worry-free booking experience from start to finish.</p>
 
-    <div class="d-flex align-items-center mt-4">
-      <h4>Save more money by booking high class profile girls in our escorts service</h4>
-    </div>
-    <p>Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
-      Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
-      Unlock exceptional savings by booking our high-class profile girls. Experience luxury without the premium price tag. Discover elegance and sophistication at affordable rates. Reserve your companion today and indulge in a memorable experience that doesn't break the bank.
-    </p>
-
+    <h3>Connect with Us for the Ultimate Luxury Experience</h3>
+     <p> We invite you to reach out and discover the world of sophistication, elegance, and intimate companionship. Whether you are inquiring about our luxury escort services, seeking an exclusive VIP experience, or need assistance with booking, we are here to help.</p>
   </div>
 
   <div class="container">
@@ -48,7 +35,15 @@
       </div>
     </div>
   </div>
-
+  @if ($errors->any())
+  <div class="alert alert-danger">
+    <ul>
+      @foreach ($errors->all() as $error)
+      <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+  @endif
 
   <div class="map mt-3">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>

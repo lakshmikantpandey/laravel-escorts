@@ -17,6 +17,9 @@ class ModelsController extends Controller
 
     public function createModel(Request $request)
     {
+        if (!auth()->check()) {
+            return redirect()->route('login');
+        }
         $request->validate([
             'modelName' => 'required',
             'age' => 'required',
@@ -25,7 +28,7 @@ class ModelsController extends Controller
             'detail' => 'required',
             'height' => 'required',
             'categoryId' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif',
         ]);
 
         $imageName = $this->handleImageUpload($request);

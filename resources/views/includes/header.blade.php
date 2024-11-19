@@ -15,8 +15,8 @@
           <li class="dropdown">
             <a href="#"><span>Our Locations</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
+              <li><a href="{{ route('models', ['city' => 'Mumbai']) }}" class="city-link">Call Girls in  Mumbai</a></li>
               <li><a href="{{ route('models', ['city' => 'Goa']) }}" class="city-link">Call Girls in  Goa</a></li>
-              <li><a href="{{ route('models', ['city' => 'Raipur']) }}" class="city-link">Call Girls in  Raipur</a></li>
               <li><a href="{{ route('models', ['city' => 'Hyderabad']) }}" class="city-link">Call Girls in  Hyderabad</a></li>
             </ul>
           </li>

@@ -64,7 +64,7 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form id="modelForm" action="" method="POST" enctype="multipart/form-data">
+                    <form id="modelForm" action="{{ route('createModel') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="modelId" id="modelId">
                         <div class="modal-body">
@@ -77,7 +77,7 @@
                             <label for="city">City</label>
                             <input type="text" class="form-control" name="city" id="city" placeholder="Enter Model city">
                             <label for="city">Area</label>
-                            <input type="text" class="form-control" name="aria" id="aria" placeholder="Enter Model aria">
+                            <input type="text" class="form-control" name="area" id="area" placeholder="Enter Model area">
                             <label for="categoryId">Category</label>
                             <select class="form-control" name="categoryId" id="categoryId" required>
                                 <option value="">Choose model category...</option>
@@ -100,6 +100,16 @@
         </div>
 
     </div>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
 </main>
 
 

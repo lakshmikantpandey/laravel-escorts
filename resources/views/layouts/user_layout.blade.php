@@ -5,15 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Best Call girls in Raipur Chhattishgarh, Hyderabad, and Goa VIP Escort</title>
-  <meta content="Raipur Goa Hyderabad Independent High Class in (a low price) Female Escort Service Housewife Callgirla Service VIP Hotel room booking doorstep delivery with COD" name="description">
-  <meta content="Raipur independent escorts, housewife, callgirls, service" name="keywords">
+  <title>Best Call girls in Mumbai and VIP Escort</title>
+  <meta content="Mumbai Independent High Class in (a low price) Female Escort Service Housewife Callgirls Service VIP Hotel room booking doorstep delivery with COD" name="description">
+  <meta content="Mumbai independent escorts, housewife, callgirls, service" name="keywords">
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Best Call girls in Raipur Chhattishgarh, Hyderabad, and Goa VIP Escort +Hotel room (COD)" />
-  <meta property="og:description" content="High Class in (a low price) Raipur Goa Hyderabad Independent Female Escort Service Housewife Callgirla Service VIP Hotel room booking doorstep delivery with COD" />
-  <meta property="og:url" content="https://www.raipur7starescorts.in" />
-  <meta property="og:site_name" content="Raipur 7 star Escorts" />
+  <meta property="og:title" content="Best Call girls in Mumbai VIP Escort +Hotel room (COD)" />
+  <meta property="og:description" content="High Class in (a low price) Mumbai Independent Female Escort Service Housewife Callgirls Service VIP Hotel room booking doorstep delivery with COD" />
+  <meta property="og:url" content="https://www.bestcallgirlsinmumbai.in" />
+  <meta property="og:site_name" content="Mumbai 7 star Escorts" />
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
